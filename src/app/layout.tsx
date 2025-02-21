@@ -4,12 +4,17 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/layout/NavBar';
 import Footer from '@/components/layout/Footer';
+import { siteConfig } from '@/lib/config';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Mi Blog Personal | Ingeniero Informático',
-  description: 'Blog personal sobre ingeniería informática, desarrollo web, y mis proyectos.',
+  title: {
+    default: siteConfig.site.name,
+    template: `%s | ${siteConfig.site.name}`,
+  },
+  description: siteConfig.site.description,
+  // ... otros metadatos
 };
 
 export default function RootLayout({

@@ -1,4 +1,4 @@
-// src/lib/posts.ts
+// import 'server-only';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -14,6 +14,11 @@ export type PostMetadata = {
   coverImage: string;
   tags: string[];
   readingTime: string;
+};
+
+// Añade este nuevo tipo
+export type Post = PostMetadata & {
+  content: string;
 };
 
 export function getSortedPostsMetadata(): PostMetadata[] {
@@ -83,7 +88,7 @@ export function getAllPostSlugs() {
     });
 }
 
-export async function getPostData(slug: string): Promise<PostMetadata & { content: string }> {
+export async function getPostData(slug: string): Promise<Post> {
   const fullPath = path.join(postsDirectory, `${slug}.mdx`);
   
   try {

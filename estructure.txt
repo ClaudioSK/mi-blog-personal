@@ -1,0 +1,46 @@
+mi-blog-personal/
+│
+├── node_modules/
+│
+├── public/
+│
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── about/
+│   │   │   └── page.tsx
+│   │   ├── blog/
+│   │   │   ├── page.tsx
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx
+│   │   ├── contact/
+│   │   │   ├── metadata.ts
+│   │   │   └── page.tsx
+│   │   ├── projects/
+│   │   │   └── page.tsx
+│   │   ├── favicon.ico
+│   │   └── globals.css
+│   │
+│   ├── components/
+│   │   ├── blog/
+│   │   │   ├── BlogContext.tsx
+│   │   │   ├── PostCard.tsx
+│   │   │   └── ShareButtons.tsx
+│   │   └── layout/
+│   │       ├── Footer.tsx
+│   │       ├── NavBar.tsx
+│   │       └── ThemeToggle.tsx
+│   │
+│   └── lib/
+│       ├── config/
+│       └── posts.ts
+│
+├── .env.local
+├── .gitignore
+├── README.md
+├── next.config.js
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── tsconfig.json
